@@ -189,7 +189,7 @@ h1{
 
 .author-candle img{
 
-    width:130px;
+    width:75px;
 
     height:auto;
 
@@ -267,4 +267,12 @@ h1{
 
     }
 
+}
+
+.redirect-message{
+    margin-top:25px;
+    font-size:0.9rem;
+    color:#9c9c9c;
+    letter-spacing:2px;
+    opacity:.8;
 }
