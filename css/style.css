@@ -1,1 +1,270 @@
+/* =========================================
+   D. K. ARDENT - Sitio Oficial
+   Archivo: style.css
+   ========================================= */
 
+/* ---------- Reinicio básico ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* ---------- Configuración general ---------- */
+
+body{
+
+    background:#050505;
+
+    color:#f2ede3;
+
+    font-family:Georgia, serif;
+
+    min-height:100vh;
+
+    overflow:hidden;
+}
+
+/* ---------- Lienzo de la lluvia ---------- */
+
+#rain{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    z-index:0;
+
+}
+
+/* ---------- Capa de iluminación ---------- */
+
+.overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(120,80,20,.10),
+            rgba(0,0,0,.55) 65%,
+            rgba(0,0,0,.90) 100%
+        );
+
+    z-index:1;
+
+}
+
+/* ---------- Contenido ---------- */
+
+.container{
+
+    position:relative;
+
+    z-index:2;
+
+    min-height:100vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding:30px;
+
+}
+
+/* ---------- Título ---------- */
+
+h1{
+
+    font-size:60px;
+
+    letter-spacing:8px;
+
+    margin-bottom:20px;
+
+    color:#f7f2e8;
+
+    text-shadow:
+
+        0 0 8px rgba(255,220,140,.08),
+
+        0 0 25px rgba(255,180,60,.04);
+}
+
+/* ---------- Subtítulo ---------- */
+
+.subtitle{
+
+    font-size:20px;
+
+    opacity:.80;
+
+    margin-bottom:25px;
+
+}
+
+/* ---------- Frase ---------- */
+
+.quote{
+
+    max-width:700px;
+
+    margin-top:10px;
+
+    font-style:italic;
+
+    color:#d8d2c6;
+
+    opacity:.82;
+
+    line-height:1.8;
+}
+
+/* ---------- Fotografía del autor ---------- */
+
+.author-photo{
+
+    margin-bottom:35px;
+
+}
+
+.author-photo img{
+
+    width:180px;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,190,90,.25);
+
+    box-shadow:
+
+        0 0 15px rgba(255,180,80,.15),
+
+        0 0 40px rgba(0,0,0,.6);
+
+    transition:.4s;
+
+}
+
+.author-photo img:hover{
+
+    transform:scale(1.03);
+
+    box-shadow:
+
+        0 0 20px rgba(255,200,120,.25),
+
+        0 0 60px rgba(0,0,0,.7);
+
+}
+
+/* ---------- Vela ---------- */
+
+.author-candle{
+
+    margin-top:-15px;
+
+    margin-bottom:15px;
+
+}
+
+.author-candle img{
+
+    width:130px;
+
+    height:auto;
+
+    display:block;
+
+    margin:auto;
+
+    filter:
+
+        drop-shadow(0 0 10px rgba(255,210,120,.12))
+
+        drop-shadow(0 0 25px rgba(255,180,70,.10));
+
+    animation:
+
+        /*candleFloat 5s ease-in-out infinite,*/
+
+        candleGlow 4s ease-in-out infinite;
+
+}
+
+/* ---------- Animaciones ---------- */
+
+/*@keyframes candleFloat{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-2px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}*/
+
+@keyframes candleGlow{
+
+    0%{
+
+        filter:
+
+        drop-shadow(0 0 8px rgba(255,210,120,.10))
+
+        drop-shadow(0 0 18px rgba(255,180,70,.08));
+
+    }
+
+    50%{
+
+        filter:
+
+        drop-shadow(0 0 14px rgba(255,220,150,.18))
+
+        drop-shadow(0 0 35px rgba(255,190,90,.15));
+
+    }
+
+    100%{
+
+        filter:
+
+        drop-shadow(0 0 8px rgba(255,210,120,.10))
+
+        drop-shadow(0 0 18px rgba(255,180,70,.08));
+
+    }
+
+}
